@@ -1,0 +1,515 @@
+/* --- Reset / Normalize de base ---
+
+/* Box sizing global pour tous les éléments */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+* {
+  font-family: "lato";
+}
+
+/* Remove default margins and paddings */
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+figure,
+blockquote,
+dl,
+dd,
+ul,
+ol,
+li,
+fieldset,
+legend {
+  margin: 0;
+  padding: 0;
+}
+
+/* Listes sans décoration par défaut */
+ul,
+ol {
+  list-style: none;
+}
+
+/* Liens */
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* Images, vidéos, SVG, canvas — afficher de façon responsive, bloc, ne pas dépasser */
+img,
+picture,
+video,
+svg,
+canvas {
+  display: block;
+  max-width: 100%;
+}
+
+/* Inputs / Buttons / selects hériteront de la police de caractère du body */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+  font-size: inherit;
+  color: inherit;
+}
+
+/* Rendre plus lisible / éviter débordements de texte */
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  overflow-wrap: break-word;
+}
+
+/* Corps de page : hauteur minimum + bonne interligne */
+body {
+  min-height: 100vh;
+  line-height: 1.5;
+}
+
+/* Décoration de texte par défaut plus propre */
+html {
+  -webkit-text-size-adjust: 100%;
+  /* éviter redimensionnement texte sur iOS/Safari */
+  -moz-text-size-adjust: 100%;
+  text-size-adjust: 100%;
+}
+
+
+nav {
+  width: 100vw;
+  position: fixed;
+  list-style: none;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 10px;
+  font-size: 1em;
+  animation: scroll-transition;
+  z-index: 1000;
+  animation-timeline: scroll(y)
+}
+
+@keyframes scroll-transition {
+  0% {
+    box-shadow: none;
+  }
+
+  25% {
+    background-color: #fff;
+    box-shadow: black 0px 0px 10px;
+  }
+
+  100% {
+    background-color: #fff;
+    box-shadow: black 0px 0px 10px;
+  }
+}
+
+nav .navBar {
+  margin-left: 10px;
+  display: flex;
+  flex-direction: row;
+  gap: 2em;
+}
+
+nav .search {
+  margin-right: 20px;
+}
+
+#home img {
+  width: 100vw;
+  object-fit: cover;
+}
+
+#home .bg {
+  background-image: url("img/parallax1.jpg");
+  background-position: center;
+  background-size: cover;
+  background-attachment: fixed;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 80vh;
+  text-align: center;
+  margin: auto;
+}
+
+
+#home h1 {
+  font-size: 4em;
+  color: white;
+  background-color: black;
+  font-weight: 300;
+  padding-left: 30px;
+  padding-right: 30px;
+
+}
+
+.about .aboutMe {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 100px;
+  gap: 20px;
+}
+
+.aboutMe h2 {
+  font-size: 2.5em;
+  font-weight: 300;
+}
+
+.aboutMe h3 {
+  font-size: 1.5em;
+  font-weight: 300;
+  font-style: italic;
+}
+
+.aboutMe p {
+  font-size: 1em;
+  font-weight: 300;
+  text-align: justify;
+  width: 75%;
+}
+
+.identity {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 80px;
+  padding-left: 250px;
+  gap: 30px;
+  width: 90vw;
+
+}
+
+.identity .name {
+  font-size: 1em;
+  font-weight: 300;
+  text-align: justify;
+  width: 75%;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  align-items: center;
+}
+
+.identity .name img {
+  max-width: 500px;
+  height: auto;
+  padding: 20px;
+}
+
+.presentation p {
+  font-size: 1em;
+  font-weight: 300;
+  width: 75%;
+}
+
+.progression {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  align-items: center;
+  margin: 80px;
+  padding-left: 250px;
+  width: 90vw;
+}
+
+.progression p {
+  font-size: 1em;
+  font-weight: 300;
+  text-align: center;
+}
+
+.progression label {
+  font-size: 1.3em;
+  font-weight: 300;
+  text-align: center;
+}
+
+.progression label i {
+  margin-right: 10px;
+}
+
+.progression .skillsBar {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  align-items: start;
+  width: 70vw;
+  padding-right: 200px;
+}
+
+.fontBar {
+  width: 100%;
+  height: 40px;
+  background-color: #f1f1f1;
+
+}
+
+.fontBar .progressBarPhotography,
+.fontBar .progressBarWeb,
+.fontBar .progressBarPhotoshop {
+  height: 100%;
+  background-color: #3f3f3f;
+}
+
+.progressBarPhotography {
+  width: 90%;
+}
+
+.progressBarWeb {
+  width: 85%;
+}
+
+.progressBarPhotoshop {
+  width: 75%;
+}
+
+.percentage {
+  color: #fff;
+  font-size: 1em;
+  padding-left: 50%;
+  padding-top: 8px;
+}
+
+
+.stats {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  width: 99, 5vw;
+  background-color: #3f3f3f;
+  height: 160px;
+}
+
+.stats .numbers {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  color: #fff;
+  font-size: 1.3em;
+  font-weight: bold;
+} 
+
+.portfolio .bg {
+  background-image: url("img/parallax2.jpg");
+  background-position: center;
+  background-size: cover;
+  filter: sepia(35%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 50vh;
+  text-align: center;
+  margin: auto;
+  color: #fff;
+  font-size: 2.5em;
+  font-weight: 500;
+
+} 
+
+.portfolio .myWork {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 100px;
+  gap: 20px;
+}
+
+.portfolio .myWork h2 {
+  font-size: 2.5em;
+  font-weight: 300;
+}
+
+.portfolio .myWork h3 {
+  font-size: 1.5em;
+  font-weight: 300;
+  font-style: italic;
+}
+
+.portfolio .photos {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  flex-wrap: wrap;
+  margin: 80px;
+
+}
+
+
+.portfolio .container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+}
+
+.load {
+  margin-bottom: 150px;
+  background-color: #f1f1f1;
+  height: 50px;
+  width: 8%;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+}
+
+.contact .bg {
+  background-image: url("img/parallax3.jpg");
+  background-position: center;
+  background-size: cover;
+  filter: sepia(50%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 50vh;
+  text-align: center;
+  margin: auto;
+  color: #fff;
+  font-size: 2.5em;
+  font-weight: 500;
+
+}
+
+
+.where {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  align-items: center;
+  margin: 80px;
+  width: 90vw;
+}
+
+.where h2 {
+  font-size: 2.5em;
+  font-weight: 300;
+}
+
+.where h3 {
+  font-size: 1.5em;
+  font-weight: 300;
+  font-style: italic;
+}
+
+.map {
+  display: flex;
+  align-items: center;
+  gap: 40px;
+  margin: 20px;
+  padding-left: 350px;
+}
+
+.map img {
+  width: 250px
+}
+
+.map i {
+  margin-right: 20px;
+  color: #7e7e7e;
+}
+
+.map .swing i {
+  margin-right: 0;
+}
+
+.map .coord p {
+  font-size: 1em;
+  color: rgb(0, 0, 0);
+  font-weight: 300;
+  margin-top: 7px;
+  margin-bottom: 0;
+
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  width: 75vw;
+  align-items: flex-end;
+  padding-right: 12px;
+}
+
+.form input {
+  width: 20vw;
+}
+
+.form .message{
+  width: 40vw;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
+.form .submit {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.form .submit button{
+  width: 9vw;
+  background-color: black;
+  color: #fff;
+
+}
+
+.form .submit button span{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+
+
+
+footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin-top: 80px;
+  padding-top: 50px;
+  padding-bottom: 20px;
+  gap: 30px;
+  width: 99.2vw;
+  background-color: #3f3f3f;
+
+}
+
+.top {
+  background-color: #fff;
+  width: 150px;
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.top i {
+  padding-right: 35px;
+}
+
+footer .socialMedia, footer p {
+  color: #fff;
+}
