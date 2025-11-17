@@ -183,8 +183,8 @@ header img {
     top: 10rem;
     left: 18rem;
     transform: translate(-50%, -50%);
-    background: linear-gradient(to right, #ffffff, #3f3f3f);
-    border-radius: 50px;
+    background: black;
+    border-radius: 1rem;
     padding: 5px 20px;
     z-index: 10;
 
